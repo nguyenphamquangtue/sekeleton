@@ -1,0 +1,14 @@
+version: "3.5"
+
+services:
+  postgres:
+    image: postgres
+    environment:
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: skeleton
+      POSTGRES_HOST: postgres
+      POSTGRES_USER: postgres
+    ports:
+      - 5434:5432
+    volumes:
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql

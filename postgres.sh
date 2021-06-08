@@ -1,0 +1,1 @@
+psql -U postgres -d skeleton -A -t -c "CREATE TABLE IF NOT EXISTS users (id TEXT NOT NULL, password TEXT NOT NULL, max_todo INTEGER DEFAULT 5 NOT NULL, CONSTRAINT users_PK PRIMARY KEY (id));INSERT INTO users (id, password);
